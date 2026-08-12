@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        font-family:sans-serif;
+        justify-content:center;
+        text-align: center;
+        
+
+    }
+</style>
+<body>
+    
+
+    <h2>wordpress</h2>
+    <p>Click the input box and press keys.</p>
+
+    <input type="text" id="textinput" placeholder="Typehere..."/>
+
+    <script>
+        let input=document.querySelector("#textinput")
+
+        input.addEventListener("keypress",(event)=>{
+            console.log(`Key pressed: ${event.key}`);
+        })
+
+
+
+
+
+
+    </script>
+</body>
+</html>

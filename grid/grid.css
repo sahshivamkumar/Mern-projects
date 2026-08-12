@@ -1,0 +1,83 @@
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Inter", sans-serif;
+            background-color: black;
+            color: white;
+        }
+        .container{
+            background-color: white;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+
+        }
+        .grid-container{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+            grid-template-rows: repeat(auto-fit, minmax(300px,1fr));
+            justify-items: center;
+            align-items: center;
+            gap: 20px;
+
+        }
+
+        .text-content-div{
+            width: 30vw;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 8px ;
+
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+
+        .text-content-div span{
+            color: rgb(30, 153, 248);
+            font-weight: 700;
+            cursor: pointer; 
+        }
+        .text-content-div p{
+            color: rgb(145, 145, 145);
+            font-weight: 400;
+            cursor: pointer; 
+        }
+        .text-content-div h2{
+
+            color: rgb(196, 194, 194);
+            font-weight: 600;
+            cursor: pointer; 
+        }
+        img{
+            height: 100%;
+            width: 100%;
+        }
+
+        .workflow-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            height: 50vh;
+        }
+        .workflow-container h4{
+            font-size: 16px;
+            font-weight: 300;
+            color: rgb(157, 156, 156);
+            font-weight: 400;
+        }
+        .workflow-container h1{
+            font-size: 40px;
+            font-weight: 600;
+        }
+        .workflow-container p{
+            width: 30vw;
+            font-size: 16px;
+            font-weight: 400;
+            text-align: center;
+            color: gray;
+        }

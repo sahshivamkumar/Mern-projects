@@ -1,0 +1,104 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        background-color: aqua;
+    }
+</style>
+<body>
+    <div class="container">
+        <h1>Main heading</h1>
+        <p>This is the description of my website</p>
+    </div>
+
+    <script>
+        let containerDiv = document.querySelector(".container");
+
+        containerDiv.style.cssText += "width:400px; height:200px; padding:4px; border:2px solid black; border-radius:10px; display:flex; flex-direction:column;";
+    </script>
+</body>
+</html> -->
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+</head>
+<style>
+
+</style>
+<body>
+
+<h1>DOM Manipulation</h1>
+
+<div class="list">
+    insert
+</div>
+
+<script>
+document.querySelector("h1").style.color = "orangered";
+
+let listDiv = document.querySelector(".list");
+
+listDiv.style.cssText += "background-color:beige; width:50%; padding:10px; border-radius:10px; border:2px solid black;";
+
+let newPara = document.createElement("p");
+
+newPara.innerHTML = "This is text demo";
+
+// add css class/id
+newPara.className = "para";
+newPara.id = "para";
+
+listDiv.appendChild(newPara);
+
+</script>
+
+</body>
+</html> -->
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DOM Manipulation</h1>
+    <p>using setattribute and getattribute</p>
+    <div class="container" id="container" title="DOM">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </div>
+    <script>
+        let containerDiv=document.querySelector(".container")
+        // getattribute logs the attribute name
+        console.log(containerDiv.getAttribute("class"))
+        console.log(containerDiv.getAttribute("id"))
+        console.log(containerDiv.getAttribute("title"))
+        // setattribute : sets up the attribute name and value
+        console.log(containerDiv.setAttribute("data-variable","priority-order"))
+    </script>
+</body>
+</html>

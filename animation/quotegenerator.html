@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quote Generator</title>
+
+<style>
+body{
+    margin:0;
+    padding:0;
+    background:#f0f8ff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    font-family:Arial,sans-serif;
+}
+
+.container{
+    width:450px;
+    background:white;
+    padding:30px;
+    text-align:center;
+    border-radius:10px;
+    box-shadow:0 0 10px gray;
+}
+
+h1{
+    color:#1e3a8a;
+}
+
+.quote_text{
+    font-size:22px;
+    margin:20px 0;
+}
+
+.quote_author{
+    color:#555;
+    font-style:italic;
+    margin-bottom:20px;
+}
+
+button{
+    padding:10px 20px;
+    font-size:16px;
+    background:#007bff;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#0056b3;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+    <h1>Quote Generator</h1>
+
+    <p class="quote_text">
+        Click the button to generate a new quote.
+    </p>
+
+    <p class="quote_author"></p>
+
+    <button id="btn">Generate New Quote</button>
+</div>
+
+<script>
+
+const quotes = [
+    {
+        text: "Success is not final, failure is not fatal.",
+        author: "Winston Churchill"
+    },
+    {
+        text: "Believe you can and you're halfway there.",
+        author: "Theodore Roosevelt"
+    },
+    {
+        text: "Dream big and dare to fail.",
+        author: "Norman Vaughan"
+    },
+    {
+        text: "Stay hungry, stay foolish.",
+        author: "Steve Jobs"
+    },
+    {
+        text: "The future depends on what you do today.",
+        author: "Mahatma Gandhi"
+    }
+];
+
+const btn = document.getElementById("btn");
+const quoteText = document.querySelector(".quote_text");
+const quoteAuthor = document.querySelector(".quote_author");
+
+btn.addEventListener("click", function(){
+
+    let randomIndex = Math.floor(Math.random() * quotes.length);
+
+    quoteText.innerHTML = quotes[randomIndex].text;
+    quoteAuthor.innerHTML = "- " + quotes[randomIndex].author;
+
+});
+
+</script>
+
+</body>
+</html>

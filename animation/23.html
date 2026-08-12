@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+
+    <style>
+        body {
+            background-color: lightgray;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            background-color: white;
+            width: 400px;
+            border-radius: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>DOM MANIPULATION</h1>
+    <h4>Revising covered properties</h4>
+
+    <div class="container">
+        <p>Description 1</p>
+        <p>Summary 1</p>
+    </div>
+
+    <script>
+        let h1 = document.querySelector("h1");
+        h1.innerHTML = "REACT JS";
+        h1.style.color = "orangered";
+        console.log(h1);
+
+        let h4 = document.querySelector("h4");
+        h4.innerText = "Completed all topics";
+        h4.style.color = "green";
+        console.log(h4);
+
+        let containerDiv = document.querySelector(".container");
+        containerDiv.style.backgroundColor = "white";
+        containerDiv.style.borderRadius = "10px";
+        containerDiv.style.padding = "10px";
+        containerDiv.style.width = "400px";
+
+        containerDiv.style.cssText += `
+            border: 2px solid black;
+            box-shadow: 0px 4px 8px gray;  
+            margin-top: 20px;
+        `;
+
+        console.log(containerDiv);
+        console.log("JavaScript is running!");
+
+    </script>
+
+</body>
+</html>

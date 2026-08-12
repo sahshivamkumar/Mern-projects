@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+</head>
+<body>
+
+    <h1>DOM Manipulation</h1>
+    <p>Using getAttribute() and setAttribute()</p>
+
+    <div class="container" id="container" title="DOM">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </div>
+
+    <script>
+
+        let containerDiv = document.querySelector(".container");
+
+        // getAttribute() logs the attribute values
+        console.log(containerDiv.getAttribute("class"));
+        console.log(containerDiv.getAttribute("id"));
+        console.log(containerDiv.getAttribute("title"));
+
+        // setAttribute() adds a new attribute
+        containerDiv.setAttribute("data-variable", "priority-order");
+
+        // Display the newly added attribute
+        console.log(containerDiv.getAttribute("data-variable"));
+
+    </script>
+
+</body>
+</html>

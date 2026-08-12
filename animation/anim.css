@@ -1,0 +1,84 @@
+
+.box{
+    background-color:red;
+    width:100px;
+    height:100px;
+    border-radius:10px;
+    opacity:1;
+
+    transition:
+        background-color 2s ease 0s,
+        border-radius 2s ease 1s,
+        width 2s linear 0s,
+        height 2s linear 0s,
+         transform 1s ease-in-out 0s,
+        opacity 2s ease 0s,
+        box-shadow 1s ease 0s;
+}
+
+.box:hover{
+    background-color:blue;
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    transform:rotate(360deg);
+    opacity:0.7;
+    box-shadow:0 0 20px black;
+}
+
+.box2{
+    background-color:green;
+    width:100px;
+    height:100px;
+    border: 10px;
+    border-radius: 50px;
+    opacity:1;
+    margin-top:20px;
+
+    transition:
+        background-color 2s ease 0s,
+        border-radius 2s ease 1s,
+        width 2s linear 0s,
+        height 2s linear 0s,
+        transform 1s ease-in-out 0s,
+        opacity 2s ease 0s,
+        box-shadow 1s ease 0s;
+}
+
+.box2:hover{
+    background-color:yellow;
+    width:150px;
+    height:150px;
+    border-radius:0%;
+    transform:rotate(360deg);
+    opacity:0.7;
+    box-shadow:0 0 20px black;
+}
+
+/* tab screen */
+@media (max-width: 850px) {
+    body{
+        background-color: black;
+        flex-direction: row;
+    }
+}
+
+.box3{
+    width:300px;
+    height:150px;
+    background-color:rgb(211,252,51);
+    border-radius:10px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    margin:50px auto;   /* Centers horizontally */
+}
+
+/* mobile screen */
+@media (max-width: 480px) {
+    .box3{
+        background-color: rgb(18, 230, 82);
+    }
+}

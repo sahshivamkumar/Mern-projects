@@ -1,0 +1,114 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DOM Navigation Demo</title>
+</head>
+<body>
+
+    <div id="heading">
+        <h1>Welcome to My Page</h1>
+    </div>
+    <div class="container">
+        <p class="first-para">First Paragraph</p>
+        <p class="second-para">Second Paragraph</p>
+    </div>
+    <div id="footer">
+        <p>Footer Content</p>
+    </div>
+
+    <script>
+        let headingDiv = document.querySelector("#heading");
+        let containerDiv = document.querySelector(".container");
+        let paraElements = document.querySelectorAll("p");
+        console.log("--- First & Last Child ---");
+        console.log(containerDiv.firstElementChild); 
+        console.log(containerDiv.lastElementChild); 
+
+        console.log("--- Siblings ---");
+        console.log(containerDiv.previousElementSibling);
+        console.log(containerDiv.nextElementSibling.innerHTML); 
+
+        console.log("--- querySelectorAll Count ---");
+        console.log("Total paragraphs found: " + paraElements.length); // Logs: 3
+    </script>
+</body>
+</html> -->
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>appendChild Example</title>
+</head>
+<body>
+
+    <ul id="list"></ul>
+
+    <script>
+        let ul = document.getElementById("list");
+
+        let li1 = document.createElement("li");
+        li1.innerText = "Finish homework";
+        ul.appendChild(li1);
+
+        let li2 = document.createElement("li");
+        li2.innerText = "New task (appendChild)";
+        ul.appendChild(li2);
+
+        let li3 = document.createElement("li");
+        li3.innerText = "New task (appendChild)";
+        ul.appendChild(li3);
+
+        let li4 = document.createElement("li");
+        li4.innerText = "New task (appendChild)";
+        ul.appendChild(li4);
+    </script>
+
+</body>
+</html> -->
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title >appendChild</title>
+    <style>
+        li {
+            background-color: aquamarine;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <p style="text-align: center;">1</p>
+        <p style="text-align: center;">2</p>
+        <p id="item2"style="text-align: center;">3</p>
+    </div>
+
+    <script>
+        let para =document.createElement("p")
+        para.innerText = "this is the new task"
+        para.style.color = "black"
+        para.style.fontSize = "30px"
+        para.style.textAlign="center"
+
+
+        let containerDiv = document.querySelector(".container")
+        containerDiv.appendChild(para)
+        containerDiv.style.backgroundColor="yellow"
+        containerDiv.style.fontsize="30px"
+
+        let item2 = document.querySelector("#item2")
+        containerDiv.insertBefore(para,item2)
+        containerDiv
+
+    </script>
+    
+</body>
+</html>
